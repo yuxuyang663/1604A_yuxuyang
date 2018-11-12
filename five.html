@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>距离元旦:<input type="text" id="myDate" value="" />
+</body>
+</html>
+<script type="text/javascript">
+    var yuandan = new Date(2019, 1, 1);
+    var nowDate = new Date();
+    var leftsecond = (yuandan - nowDate)/1000;
+    window.setInterval(function () {
+        if (leftsecond <= 0) {
+            return;
+        }
+        leftsecond--;
+        var day = Math.floor(leftsecond / (60 * 60 * 24));
+        var hour = Math.floor((leftsecond - day * 24 * 60 * 60) / 3600);
+        var minute = Math.floor((leftsecond - day * 24 * 60 * 60 - hour * 3600) / 60);
+        var second = Math.floor(leftsecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60);
+        var timerText = day + "天";
+        if (hour > 9) {
+            timerText += hour + "小时";
+        }
+        else {
+            timerText += "0" + hour + "小时";
+        }
+        if (minute > 9) {
+            timerText += minute + "分钟";
+        }
+        else {
+            timerText += "0" + minute + "分钟";
+        }
+        if (second > 9) {
+            timerText += second + "秒";
+        }
+        else {
+            timerText += "0" + second + "秒";
+        }
+        document.getElementById("myDate").value = timerText;
+    }, 1000);
+</script>

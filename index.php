@@ -1,21 +1,11 @@
 <?php 
-function sixOne($n,$m)
-{
-    echo "<pre>";
-    $a = 1;
-    $arr = range(0,$n-1);
-    while(true){
-        if(count($arr)==1){
-            return array_keys($arr)[0];
-        }
-        foreach($arr as $key=>$val){
-            $a++;
-            if($a==$m-1){
-                unset($arr[$key]);
-                $a=0;
-            }
-        }
-    }
-}
-
+ for ($i=1; $i < 5; $i++) { 
+ 	for ($j=1; $j < 5; $j++) { 
+ 	   for ($k=1; $k < 5; $k++) { 
+ 	   	if ($i!=$j && $i != $k && $j != $k) { 
+ 	   		echo $i*100+$j*10+$k."<br>";
+ 	   	}
+ 	   }
+ 	}
+ }
 ?>
