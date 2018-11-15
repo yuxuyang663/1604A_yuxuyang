@@ -1,11 +1,36 @@
-<?php 
- for ($i=1; $i < 5; $i++) { 
- 	for ($j=1; $j < 5; $j++) { 
- 	   for ($k=1; $k < 5; $k++) { 
- 	   	if ($i!=$j && $i != $k && $j != $k) { 
- 	   		echo $i*100+$j*10+$k."<br>";
- 	   	}
- 	   }
- 	}
- }
-?>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: 于旭阳
+ * Date: 2018/11/15
+ * Time: 8:26
+ */
+function upAndS($array,$s)
+{
+    $a = end($array);
+    $b = prev($array);
+    if(($a+$b)<$s) return false;
+    foreach($array as $key=>$val){
+        if($val>$s){
+            unset($array[$key]);
+        }
+    }
+    $arr = array();
+    foreach($array as $key=>$val){
+        foreach($array as $k=>$v){
+            if($val!=$v){
+                $a = $val+$v;
+                if($a==$s){
+                    $arr[$key] = array($val,$v);
+                }
+            }
+        }
+        unset($array[$key]);
+    }
+    $are = array();
+    foreach($arr as $key=>$val){
+        $are[] = array_product($val);
+    }
+    sort($are);
+    return $are[0];
+}
