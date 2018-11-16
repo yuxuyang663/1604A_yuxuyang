@@ -2,35 +2,19 @@
 /**
  * Created by PhpStorm.
  * User: 于旭阳
- * Date: 2018/11/15
- * Time: 8:26
+ * Date: 2018/11/16
+ * Time: 8:23
  */
-function upAndS($array,$s)
-{
-    $a = end($array);
-    $b = prev($array);
-    if(($a+$b)<$s) return false;
-    foreach($array as $key=>$val){
-        if($val>$s){
-            unset($array[$key]);
-        }
+
+function First($str){
+$sr = chunk_split($str,1,',');
+$sr = rtrim($sr,',');
+$arr = explode(',',$sr);
+$cnt = array_count_values($arr);
+foreach ($cnt as $key=>$val){
+    if ($val==1){
+        return stripos($str,$key);
     }
-    $arr = array();
-    foreach($array as $key=>$val){
-        foreach($array as $k=>$v){
-            if($val!=$v){
-                $a = $val+$v;
-                if($a==$s){
-                    $arr[$key] = array($val,$v);
-                }
-            }
-        }
-        unset($array[$key]);
-    }
-    $are = array();
-    foreach($arr as $key=>$val){
-        $are[] = array_product($val);
-    }
-    sort($are);
-    return $are[0];
+}
+return -1;
 }
