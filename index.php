@@ -1,28 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<style>
-	.a{
-		width: 200px;
-		height: 100px
-		;background-color: red;
-		animation:myfirst 2s;
-	}
-		@keyframes myfirst
-			{	
-		0% {background:red;}
-		25%{background:yellow;}
-		50%{background:blue;}
-		70%{background:green;}
-		100% {background:grey;}
-		}
+<?php
+/**
+ * Created by PhpStorm.
+ * User: 于旭阳
+ * Date: 2018/11/29
+ * Time: 8:22
+ */
+//$arr = array(0,5,1,5,9);
 
-</style>
-<body>
-	<div class="a" style=""></div>
+//echo array_sum($arr);
 
-</body>
-<ml>
+// echo array_pop($arr);
+
+// echo array_shift($arr);
+
+// echo array_unshift($arr);
+
+// echo array_push($arr);
+
+// echo count($arr);
+
+// echo array_count_values($arr);
+
+// echo array_values($arr);
+
+// echo array_product($arr);
+
+// echo array_unique($arr);
+
+$a = 'hello world';
+
+//echo strlen($a);
+
+// echo str_replace($a);
+
+// echo chunl_split($a);
+
+// echo str_shuffle($a);
+
+// echo strchr($a);
+
+// echo strstr($a);
+
+// echo strpos($a);
+
+// echo strval($a);
+
+// echo strspn($a);
+
+// echo strcmp($a);
