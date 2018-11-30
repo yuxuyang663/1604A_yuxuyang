@@ -1,50 +1,47 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: 于旭阳
- * Date: 2018/11/29
- * Time: 8:22
- */
-//$arr = array(0,5,1,5,9);
-
-//echo array_sum($arr);
-
-// echo array_pop($arr);
-
-// echo array_shift($arr);
-
-// echo array_unshift($arr);
-
-// echo array_push($arr);
-
-// echo count($arr);
-
-// echo array_count_values($arr);
-
-// echo array_values($arr);
-
-// echo array_product($arr);
-
-// echo array_unique($arr);
-
-$a = 'hello world';
-
-//echo strlen($a);
-
-// echo str_replace($a);
-
-// echo chunl_split($a);
-
-// echo str_shuffle($a);
-
-// echo strchr($a);
-
-// echo strstr($a);
-
-// echo strpos($a);
-
-// echo strval($a);
-
-// echo strspn($a);
-
-// echo strcmp($a);
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="//cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+    <script src="layer/mobile/layer.js"></script>
+    <script src="layer/mobile/need/layer.css"></script>
+    <script src="layer/layer.js"></script>
+    <script src="layer/theme/default/layer.css"></script>
+</head>
+<body>
+<table align="center" border="1">
+    <tr>
+        <th>ID</th>
+        <th>账号</th>
+        <th>密码</th>
+        <th>操作</th>
+    </tr>
+    <tr id="a">
+        <td>1</td>
+        <td>gagagagaga</td>
+        <td>334456</td>
+        <td>
+            <button>删除</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+<script type="text/javascript">
+    $('button').click(function () {
+        // layer.msg('你要删除吗?', {
+        //     time: 0 //不自动关闭
+        //     ,btn: ['确定', '不确定']
+        //     ,yes: function(index){
+        //         layer.close(index);
+        //         layer.msg('删除成功!', {
+        //             icon: 6,
+        //             // $('#a').hide();
+        //         });
+        //         $('#a').hide();
+        //     }
+        // });
+        layer.msg('不开心。。', {icon: 5});
+    })
+</script>
